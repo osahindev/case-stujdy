@@ -1,0 +1,28 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5000"
+    volumes:
+      - "./backend:/code/backend"
+    networks:
+      - demirbas
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "80:3000"
+    volumes:
+      - "./frontend:/code/frontend"
+      - "nodeModules:/code/frontend/node_modules/"
+    networks:
+      - demirbas
+
+volumes:
+  nodeModules:
+    driver: local
+networks:
+  demirbas:
+    driver: bridge
