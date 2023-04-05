@@ -58,6 +58,9 @@ export const productSlice = createSlice({
             state.removeModalIsOpen = action.payload;
         },
         setEditModalIsOpen: (state, action: PayloadAction<boolean>) => {
+            if(!action.payload) {
+                state.selectedVariants = [] as Variant[];
+            }
             state.errors = {} as ErrorResponse;
             state.editModalIsOpen = action.payload;
         },
@@ -73,10 +76,16 @@ export const productSlice = createSlice({
             state.selectedRemoveProduct = action.payload;
         },
         setNewModalIsOpen: (state, action: PayloadAction<boolean>) => {
+            if(!action.payload) {
+                state.selectedVariants = [] as Variant[];
+            }
             state.errors = {} as ErrorResponse;
             state.newModalIsOpen = action.payload;
         },
         setNewSubModalIsOpen: (state, action: PayloadAction<boolean>) => {
+            if(!action.payload) {
+                state.selectedVariants = [] as Variant[];
+            }
             state.newSubModalIsOpen = action.payload;
         },
     },

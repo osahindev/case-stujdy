@@ -19,9 +19,7 @@ export const addNewProduct = createAsyncThunk("product/addNewProductAsync", asyn
             dispatch(setTitle("Başarılı !"));
             dispatch(setMessage("Ürün ekleme işlemi başarıyla tamamlandı."));
             dispatch(setSuccessModalIsOpen(true));
-            dispatch(setSelectedVariants([] as Variant[]));
         }
-
         return data;
     } catch (err: any) {
         handleUnauthorized(err, dispatch);
