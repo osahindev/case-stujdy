@@ -6,6 +6,10 @@ Front-end: Vite + React JS
 
 Back-end: Python + Flask + SQL Alchemy
 
+## Proje demo önizleme
+
+<a href="https://drive.google.com/file/d/1nMSIVRXkgMY9ja0GPOdYV4SfqdE6wvjJ/preview" title="Link Title"><img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AKGpihb1MCkZZEmkMGc4iq6igz99YxuOnun9MEdryPsiON6sq1NVwiq0u-x6s4_OoscDiSuSnsERxz_IHmjoKqEyTXMImXZLH6s7sE4=w1920-h1080-k-rw-v1-pd" alt="Alternate Text" /></a>
+
 ## Projeyi Docker ile ayağa kaldırma
 
 ```bash
